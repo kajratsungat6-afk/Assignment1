@@ -1,20 +1,18 @@
 ﻿#include <iostream>
 using namespace std;
 
+bool isPowerOfTwo(int n) {
+    if (n == 1) return true;
+    if (n <= 0 || n % 2 != 0) return false;
+    return isPowerOfTwo(n / 2);
+}
+
 int main() {
-	int , m;
-	cin >> n >> m;
-	int arr[100][100];
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cin >> arr[i][j];
-		}
-	}
-	for (int i = 0; i < m; i++) {
-		for (int j = 0; j < n; j++) {
-			cout << arr[j][i] << ' ';
-		}
-		cout << endl;
-	}
-	return 0;
+    int n;
+    cin >> n;
+
+    if (isPowerOfTwo(n))
+        cout << n << " is a power of two";
+    else
+        cout << n << " is not a power of two";
 }
