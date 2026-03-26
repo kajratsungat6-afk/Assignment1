@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+void reverseStrings(int n) {
+    if (n == 0) return;
+
+    string s;
+    cin >> s;
+
+    reverseStrings(n - 1);
+    cout << s << endl;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    reverseStrings(n);
+}
