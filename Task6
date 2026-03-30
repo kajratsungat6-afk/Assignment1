@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>
 using namespace std;
 
 void reverseStrings(int n) {
@@ -8,7 +9,10 @@ void reverseStrings(int n) {
     cin >> s;
 
     reverseStrings(n - 1);
-    cout << s << endl;
+    for (char c : s) {
+        cout << (char)tolower(c);
+    }
+    cout << endl;
 }
 
 int main() {
