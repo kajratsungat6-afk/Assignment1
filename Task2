@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// рекурсивная функция
 int sum(int arr[], int n) {
     if (n == 0) 
         return 0;
@@ -12,18 +11,14 @@ int main() {
     int n;
     cin >> n;
 
-    // динамический массив
     int* arr = new int[n];
 
-    // ввод элементов
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    // вызов функции
     cout << sum(arr, n);
 
-    // освобождение памяти
     delete[] arr;
 
     return 0;
